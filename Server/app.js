@@ -8,12 +8,7 @@ const jwt = require("jsonwebtoken");
 const path = require("path");
 
 const app = express()
-app.use(express.static(path.join(__dirname, 'build')));
 
-
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 // configs come from standard PostgreSQL env vars
 // https://www.postgresql.org/docs/9.6/static/libpq-envars.html
 const pool = new pg(
