@@ -9,8 +9,10 @@ import GeoMap from "./components/GeoMap";
 
 
 class App extends Component {
+
     constructor(props) {
         super(props);
+
         this.state= {
             eventDaily:[],
             poi:[],
@@ -25,7 +27,8 @@ class App extends Component {
     }
 
     componentDidMount() {
-        Axios.get("http://localhost:5555/events/daily"
+        const url ="https://eq-product-role.herokuapp.com"
+        Axios.get(`${url}/events/daily`
             ,{
                 headers: {
                     'token': sessionStorage.getItem('token') ?   sessionStorage.getItem('token') : ''
@@ -39,7 +42,7 @@ class App extends Component {
             })
             .catch((err) => console.log(err))
 
-        Axios.get("http://localhost:5555/events/hourly"
+        Axios.get(`${url}/events/hourly`
             ,{
                 headers: {
                     'token': sessionStorage.getItem('token') ? sessionStorage.getItem('token') : ''
@@ -54,7 +57,7 @@ class App extends Component {
             .catch((err) => console.log(err))
 
 
-        Axios.get("http://localhost:5555/stats/daily"
+        Axios.get(`${url}/stats/daily`
             ,{
                 headers: {
                     'token': sessionStorage.getItem('token') ?   sessionStorage.getItem('token') : ''
@@ -68,7 +71,7 @@ class App extends Component {
             })
             .catch((err) => console.log(err))
 
-        Axios.get("http://localhost:5555/stats/hourly"
+        Axios.get(`${url}/stats/hourly`
             ,{
                 headers: {
                     'token': sessionStorage.getItem('token') ? sessionStorage.getItem('token') : ''
@@ -81,7 +84,7 @@ class App extends Component {
                 })
             })
             .catch((err) => console.log(err))
-        Axios.get("http://localhost:5555/poi"
+        Axios.get(`${url}/poi`
             ,{
                 headers: {
                     'token': sessionStorage.getItem('token') ? sessionStorage.getItem('token') : ''
