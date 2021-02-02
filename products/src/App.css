@@ -1,0 +1,22 @@
+.characters,.character ul{
+    list-style: none;
+
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.character{
+    margin-bottom: 1rem;
+
+}
+
+label{
+    margin-right: 1rem;
+}
+
+#mapid { height: 180px; }
+.leaflet-container {
+    height: 400px;
+    width: 100%;
+}
