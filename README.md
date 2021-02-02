@@ -12,5 +12,7 @@ Solution #2.1 : To Visualize data in various charts, "Chart.js" is used.
 Express app:- https://git.heroku.com/eq-product-role.git
 
 ![alt text](https://github.com/ShubhamRanaDev/eq-product-role/blob/main/Client/public/gif1.gif " Gif")
+![alt text](https://github.com/ShubhamRanaDev/eq-product-role/blob/main/Client/public/image.png " Status(429) frim API limiter")
+
 
 
